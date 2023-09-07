@@ -75,9 +75,9 @@ namespace contabancaria.Model
             this.saldo = saldo;
         }
 
-        public bool Sacar(decimal valor)
+        public virtual bool Sacar(decimal valor)
         {
-            if (saldo < valor)
+            if (GetSaldo() < valor)
             {
                 Console.WriteLine("Saldo insuficiente!");
                 return false;
@@ -92,7 +92,7 @@ namespace contabancaria.Model
             this.SetSaldo(this.saldo + valor);
         }
 
-        public void Visualizar()
+        public virtual void Visualizar()
         {
             string tipo = "";
 

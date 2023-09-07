@@ -9,17 +9,29 @@ namespace contabancaria
         {
             int opcao;
 
-            Conta c1 = new Conta(1, 123, 1, "Gaspar", 1000000.00M);
+            //Teste da conta
+            Conta c1 = new Conta(1, 123, 1, "Adriana", 10000.00M);
+            c1.Visualizar();
+            c1.Sacar(12000.0M);
+            c1.Visualizar();
+            c1.Depositar(5000.0M);
+            c1.Visualizar();
 
-            c1.Visualizar();
-            c1.SetNumero(345);
-            c1.Visualizar();
+            //Teste da conta corrente
+            ContaCorrente cc1 = new(2, 123, 1, "Mariana", 15000.0M,1000.0M);
+            cc1.Visualizar();
+            cc1.Sacar(12000.0M);
+            cc1.Visualizar();
+            cc1.Depositar(5000.0M);
+            cc1.Visualizar();
 
-            c1.Sacar(1000);
-            c1.Visualizar();
-
-            c1.Depositar(5000);
-            c1.Visualizar();
+            //Teste da conta poupança
+            ContaPoupanca cp1 = new (3, 123, 2, "Victor", 100000.0M, 15);
+            cp1.Visualizar();
+            cp1.Sacar(1000.0M);
+            cp1.Visualizar();
+            cp1.Depositar(5000.0M);
+            cp1.Visualizar();
 
             while (true)
             {
